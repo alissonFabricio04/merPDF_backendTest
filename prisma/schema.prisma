@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// M = media
+// P = potencia
+// T = total
+
+model User {
+  id          String @id @default(uuid())
+  name        String
+  email       String
+  MConsumo    Int
+  MIrradiacao Int
+  PModulos    Int
+  TPaineis    Int
+}
