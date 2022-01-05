@@ -10,13 +10,23 @@ datasource db {
 // M = media
 // P = potencia
 // T = total
+// Max = maximo/maxima
 
-model User {
-  id          String @id @default(uuid())
-  name        String
-  email       String
-  MConsumo    Int
-  MIrradiacao Int
-  PModulos    Int
-  TPaineis    Int
+model DadosContratoComercial {
+  id                   Int @id @default(autoincrement())
+  Name                 String
+  Email                String
+
+  IdPainelName         String
+  MConsumo             Float
+  MIrradiacao          Float
+  PModulos             Float
+  AreaTInstalacao      Float
+  TModulosAplicados    Int
+  PSistema             Float
+  PInversor            Float
+  PTMaxSistemaKWP      Float
+  created_at           DateTime @default(now())
+
+  @@map("dadosContratoComercial")
 }

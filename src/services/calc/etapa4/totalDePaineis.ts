@@ -3,7 +3,7 @@ export function totalDePaineis(
     VarPotenciaTotalModulos: number,
     VarPotenciaModulo: number
 ) {
-    const totalDeModulosCalculados = (VarConsumo * VarPotenciaTotalModulos) * 1.2
+    const totalDeModulosCalculados = (VarConsumo / VarPotenciaTotalModulos) * 1.2
     const totalDeModulosAplicados = Math.ceil(totalDeModulosCalculados)
 
     const potenciaSistema = (VarPotenciaModulo * totalDeModulosAplicados) / 1000
